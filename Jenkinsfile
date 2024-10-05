@@ -22,10 +22,10 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                bat "docker rm -f my-serv-container"
-                bat "docker rmi -f my-serv-image"
-                bat "docker build -t my-serv-image ."
-                bat "docker run -p 8761:8761 -d --name my-serv-container my-serv-image"
+                bat "docker rm -f my-emp-container"
+                bat "docker rmi -f my-emp-image"
+                bat "docker build -t my-emp-image ."
+                bat "docker run -p 8761:8761 -d --name my-emp-container my-emp-image"
             }
         }
     }
