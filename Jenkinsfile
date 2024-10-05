@@ -25,7 +25,7 @@ pipeline{
                 bat "docker rm -f my-emp-container"
                 bat "docker rmi -f my-emp-image"
                 bat "docker build -t my-emp-image ."
-                bat "docker run -p 8761:8761 -d --name my-emp-container my-emp-image"
+                bat "docker run -p 8082:8082 -d --name my-emp-container my-emp-image"
             }
         }
     }
